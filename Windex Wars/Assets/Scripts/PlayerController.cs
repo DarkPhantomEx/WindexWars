@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     // Inspector Variables
     public float Speed;
     public float Jump;
+    public int PlayerNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,22 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
+        float hor = Input.GetAxis("JoystickLeftStickHorizontalPlayer"+PlayerNumber);
+        float ver = Input.GetAxis("JoystickLeftStickVerticalPlayer"+PlayerNumber);
+        float hor1 = Input.GetAxis("JoystickRightStickHorizontalPlayer" + PlayerNumber);
+        float ver1 = Input.GetAxis("JoystickRightStickVerticalPlayer" + PlayerNumber);
+        bool a = Input.GetButton("JoystickAPlayer"+PlayerNumber);
+        bool b = Input.GetButton("JoystickBPlayer" + PlayerNumber);
+        if (a)
+        {
+            Debug.Log("A - Player"+PlayerNumber);
+        }
+        if (b)
+        {
+            Debug.Log("B - Player" + PlayerNumber);
+        }
+        Debug.Log("Left Stick Hor - "+hor+" Ver"+ver +" Player" + PlayerNumber);
+        Debug.Log("Right Stick Hor - " + hor1 + " Ver" + ver1 + " Player" + PlayerNumber);
         Vector3 playerMovement = new Vector3(hor, 0f, ver) * Speed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
 
