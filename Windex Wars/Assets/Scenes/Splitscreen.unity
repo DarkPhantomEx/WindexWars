@@ -328,6 +328,7 @@ MonoBehaviour:
   RotationSpeed: 2.5
   Target: {fileID: 1518425498}
   Player: {fileID: 1776867889}
+  PlayerNumber: 2
 --- !u!81 &241477360
 AudioListener:
   m_ObjectHideFlags: 0
@@ -355,7 +356,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0.5
     width: 0.5
     height: 0.5
@@ -440,7 +441,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.5
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -478,6 +479,7 @@ MonoBehaviour:
   RotationSpeed: 2.5
   Target: {fileID: 2144253090}
   Player: {fileID: 1978167644}
+  PlayerNumber: 1
 --- !u!1 &848761701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1312,7 @@ MonoBehaviour:
   RotationSpeed: 2.5
   Target: {fileID: 1482620357}
   Player: {fileID: 867466164}
+  PlayerNumber: 3
 --- !u!81 &1738074139
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1337,7 +1340,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
     width: 0.5
     height: 0.5
@@ -1538,6 +1541,7 @@ MonoBehaviour:
   RotationSpeed: 2.5
   Target: {fileID: 74488059}
   Player: {fileID: 1406257092}
+  PlayerNumber: 4
 --- !u!81 &1786319527
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1566,7 +1570,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0.5
-    y: 0.5
+    y: 0
     width: 0.5
     height: 0.5
   near clip plane: 0.3

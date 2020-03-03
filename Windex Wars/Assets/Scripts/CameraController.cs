@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     // Inspector Variables
     public float RotationSpeed = 1;
     public Transform Target, Player;
+    public int PlayerNumber;
 
     private float mouseX, mouseY;
 
@@ -32,9 +33,17 @@ public class CameraController : MonoBehaviour
 
     void CamControl()
     {
-        mouseX += Input.GetAxis("Mouse X") * RotationSpeed;
-        mouseY -= Input.GetAxis("Mouse Y") * RotationSpeed;
+        float hor = Input.GetAxis("JoystickRightStickHorizontalPlayer" + PlayerNumber);
+        float ver = Input.GetAxis("JoystickRightStickVerticalPlayer" + PlayerNumber);
+
+        mouseX += hor * RotationSpeed;
+        mouseY -= ver * RotationSpeed;
         mouseY = Mathf.Clamp(mouseY, -35, 60);
+
+        Debug.Log("Hor: " + hor);
+        Debug.Log("Ver: " + ver);
+        Debug.Log("RotX: " + mouseX);
+        Debug.Log("RotY: " + mouseY);
 
         transform.LookAt(Target);
 
