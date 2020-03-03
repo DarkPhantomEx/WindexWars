@@ -34,6 +34,7 @@ public class Bullets : MonoBehaviour
         if (target != null)
         {
             target.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
     }
 }
