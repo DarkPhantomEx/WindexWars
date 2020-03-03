@@ -148,8 +148,8 @@ Transform:
   m_LocalPosition: {x: -1.9087791, y: 0.16202593, z: 2.631042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1308326187}
   - {fileID: 338515284}
+  - {fileID: 1308326187}
   - {fileID: 1105159643}
   - {fileID: 1900185548}
   m_Father: {fileID: 0}
@@ -344,6 +344,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2145083866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &690634278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5646282562676772114, guid: 0a21ad06b5c3c1b4fbe80734f1171dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1167847323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &690634279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690634278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92a385a374bcd14ab631f93eb766acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fpsCam: {fileID: 0}
+  player: {fileID: 690634278}
+  offset: 0
+  bulletPerfab: {fileID: 0}
 --- !u!1001 &720037596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +452,120 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a21ad06b5c3c1b4fbe80734f1171dd6, type: 3}
+--- !u!1 &812389694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5646282562676772114, guid: 0a21ad06b5c3c1b4fbe80734f1171dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 295496741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &812389695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812389694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e75f3faebbd864b95fde11e6c88270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fpsCam: {fileID: 0}
+  player: {fileID: 812389694}
+  offset: 0
+  bulletPerfab: {fileID: 8207485284939972925, guid: 5de948840cbe7634faf73c97fd1c8541,
+    type: 3}
+--- !u!114 &812389700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812389694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e4e592091c88c469370a66d2f4142d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!1 &884670514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5646282562676772114, guid: 0a21ad06b5c3c1b4fbe80734f1171dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2145083866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &884670515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884670514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f563fa21b1876de49b2e0b3c1ef17525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fpsCam: {fileID: 0}
+  player: {fileID: 884670514}
+  offset: 0
+  bulletPerfab: {fileID: 8207485284939972925, guid: 5de948840cbe7634faf73c97fd1c8541,
+    type: 3}
+--- !u!114 &884670520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884670514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e4e592091c88c469370a66d2f4142d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!1 &936655227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5646282562676772114, guid: 0a21ad06b5c3c1b4fbe80734f1171dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 720037596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &936655228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936655227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dbb8111d0d04d41964a2b2cd13f0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fpsCam: {fileID: 0}
+  player: {fileID: 936655227}
+  offset: 0
+  bulletPerfab: {fileID: 8207485284939972925, guid: 5de948840cbe7634faf73c97fd1c8541,
+    type: 3}
+--- !u!114 &936655233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936655227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e4e592091c88c469370a66d2f4142d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &951205500
 GameObject:
   m_ObjectHideFlags: 0
