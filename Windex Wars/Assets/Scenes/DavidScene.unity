@@ -1345,10 +1345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_HorizontalAxis: JoystickLeftStickHorizontalPlayer1
+  m_VerticalAxis: JoystickLeftStickVerticalPlayer1
+  m_SubmitButton: JoystickAPlayer1
+  m_CancelButton: JoystickStartPlayer1
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -1635,7 +1635,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079029829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1848247973}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079029829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,16 +2520,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff94cb18df35e0f4188e556d797e0543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 625160917662138559, guid: da44904ec4baafe47a17a7b90d539705, type: 3}
   spawnArea:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  spawnHeight: 0
+    width: 4
+    height: 4
+  spawnHeight: 1
   winCamDuration: 1
   winSprite: {fileID: 1696302416}
+  deactivateUI:
+  - {fileID: 1340969346}
+  - {fileID: 690386949}
+  - {fileID: 1777519138}
   players: 0
   playersAlive: 0
   playersObjAlive: []

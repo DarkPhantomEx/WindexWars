@@ -40,14 +40,6 @@ public class CameraController : MonoBehaviour
         mouseY -= ver * RotationSpeed;
         mouseY = Mathf.Clamp(mouseY, -35, 60);
 
-        if (PlayerNumber == 1)
-        {
-            Debug.Log("Hor: " + hor);
-            Debug.Log("Ver: " + ver);
-            Debug.Log("RotX: " + mouseX);
-            Debug.Log("RotY: " + mouseY);
-        }
-
         transform.LookAt(Target);
 
         Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);

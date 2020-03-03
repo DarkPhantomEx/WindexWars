@@ -16,12 +16,19 @@ public class SmoothFade : MonoBehaviour
     private Image image;
     private Text text;
 
+    private MenuButton menuButton;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         image = GetComponent<Image>();
         text = GetComponent<Text>();
+        menuButton = GetComponentInParent<MenuButton>();
+
+        // Disable menu button for conflicting code
+        if (menuButton != null)
+            menuButton.enabled = false;
 
         // Set the initial times
         currentTime = 0;
@@ -53,6 +60,9 @@ public class SmoothFade : MonoBehaviour
                 float value = currentTime / Duration;
                 sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, Mathf.Lerp(1, 0, value));
             }
+            // Enable button again
+            else if (menuButton != null)
+                menuButton.enabled = true;
         }
         // UI Image
         else if (image != null)
@@ -71,6 +81,9 @@ public class SmoothFade : MonoBehaviour
                 float value = currentTime / Duration;
                 image.color = new Color(image.color.r, image.color.g, image.color.b, Mathf.Lerp(1, 0, value));
             }
+            // Enable button again
+            else if (menuButton != null)
+                menuButton.enabled = true;
         }
         // UI Text
         else if (text != null)
@@ -89,6 +102,9 @@ public class SmoothFade : MonoBehaviour
                 float value = currentTime / Duration;
                 text.color = new Color(text.color.r, text.color.g, text.color.b, Mathf.Lerp(1, 0, value));
             }
+            // Enable button again
+            else if (menuButton != null)
+                menuButton.enabled = true;
         }
     }
 }

@@ -79,13 +79,18 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        // Don't start with 1 player
+        if (players < 2) return;
+
         GameManager gm = GetComponent<GameManager>();
+        gm.enabled = true;
         gm.players = players;
         gm.playersAlive = players;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
         gm.BeginGame();
+        enabled = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Quit()
