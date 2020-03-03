@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
             {
                 currentTime += Time.deltaTime;
                 float value = currentTime / winCamDuration;
-                winCam.rect.Set(Mathf.Lerp(startRect.x, 0, value), Mathf.Lerp(startRect.y, 0, value), Mathf.Lerp(startRect.width, 1, value), Mathf.Lerp(startRect.height, 1, value));
+                winCam.rect = new Rect(Mathf.Lerp(startRect.x, 0, value), Mathf.Lerp(startRect.y, 0, value), Mathf.Lerp(startRect.width, 1, value), Mathf.Lerp(startRect.height, 1, value));
             }
             else if (!winSprite.activeInHierarchy)
                 winSprite.SetActive(true);
