@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public Camera fpsCam;
     public GameObject player;
+    public float offset;
 
     public GameObject bulletPerfab;
 
@@ -25,7 +26,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void Shoot()
+    /*void Shoot()
     {
         RaycastHit hit;
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range))
@@ -38,6 +39,10 @@ public class Gun : MonoBehaviour
                 target.TakeDamage(damage);
             }
         }
-    }
-    
+    }*/
+
+
+
+
+
 }
