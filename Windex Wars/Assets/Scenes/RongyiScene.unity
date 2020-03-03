@@ -412,7 +412,6 @@ GameObject:
   - component: {fileID: 855292145}
   - component: {fileID: 855292144}
   - component: {fileID: 855292143}
-  - component: {fileID: 855292146}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -449,6 +448,7 @@ MonoBehaviour:
   RotationSpeed: 2.5
   Target: {fileID: 1431463448}
   Player: {fileID: 1117695730}
+  PlayerNumber: 0
 --- !u!81 &855292144
 AudioListener:
   m_ObjectHideFlags: 0
@@ -500,22 +500,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &855292146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855292141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f563fa21b1876de49b2e0b3c1ef17525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  fpsCam: {fileID: 855292145}
-  player: {fileID: 1117695724}
 --- !u!1 &1029245210
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +640,7 @@ GameObject:
   - component: {fileID: 1117695727}
   - component: {fileID: 1117695726}
   - component: {fileID: 1117695725}
+  - component: {fileID: 1117695731}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -677,6 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 25
   Jump: 1000
+  PlayerNumber: 0
 --- !u!136 &1117695726
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -770,6 +756,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117695731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117695724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f563fa21b1876de49b2e0b3c1ef17525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fpsCam: {fileID: 855292145}
+  player: {fileID: 1117695724}
+  bulletPerfab: {fileID: 8207485284939972925, guid: 5de948840cbe7634faf73c97fd1c8541,
+    type: 3}
 --- !u!1 &1197360303
 GameObject:
   m_ObjectHideFlags: 0
