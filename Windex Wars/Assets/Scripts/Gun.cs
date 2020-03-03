@@ -9,14 +9,19 @@ public class Gun : MonoBehaviour
     public Camera fpsCam;
     public GameObject player;
 
+    public GameObject bulletPerfab;
+
 
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetKeyDown(KeyCode.J))
         {
-            Shoot();
+            //Shoot();
+            GameObject bulletObject = Instantiate(bulletPerfab);
+            bulletObject.transform.position = this.transform.position+ transform.forward;
+            bulletObject.transform.forward = this.transform.forward;
         }
     }
 
@@ -34,4 +39,5 @@ public class Gun : MonoBehaviour
             }
         }
     }
+    
 }
