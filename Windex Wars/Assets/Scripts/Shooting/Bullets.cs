@@ -7,6 +7,10 @@ public class Bullets : MonoBehaviour
     public float damage = 10f;
     public float speed = 8f;
     public float lifeDuration = 2f;
+
+    [HideInInspector]
+    public int playerNum;
+
     private float lifeTimer;
 
     
@@ -29,9 +33,8 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hitted");
         Target target = other.transform.GetComponent<Target>();
-        if (target != null)
+        if (target != null && target.GetComponent<GunJoystick>().PlayerNumber != playerNum)
         {
             target.TakeDamage(damage);
             Destroy(this.gameObject);

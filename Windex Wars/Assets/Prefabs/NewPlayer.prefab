@@ -2012,6 +2012,8 @@ GameObject:
   - component: {fileID: 4444341565085213302}
   - component: {fileID: 4444341565085213301}
   - component: {fileID: 4444341565085213300}
+  - component: {fileID: 2912850122642692396}
+  - component: {fileID: 3675519108150916783}
   m_Layer: 0
   m_Name: NewPlayer
   m_TagString: Untagged
@@ -2107,6 +2109,36 @@ MonoBehaviour:
   PlayerNumber: 1
   m_GroundCheckDistance: 0.25
   m_GravityMultiplier: 2
+--- !u!114 &2912850122642692396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646282562676772114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131404053ae18164d8d1aea40afe0985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  bulletPerfab: {fileID: 8207485284939972925, guid: 5de948840cbe7634faf73c97fd1c8541,
+    type: 3}
+  PlayerNumber: 0
+--- !u!114 &3675519108150916783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646282562676772114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e4e592091c88c469370a66d2f4142d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &5751564490477059499
 GameObject:
   m_ObjectHideFlags: 0

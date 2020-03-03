@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 231452375106838489}
   - component: {fileID: 4560780269351011712}
   - component: {fileID: 2055193378578284579}
+  - component: {fileID: 2467068766214005416}
   - component: {fileID: 5504076934371090374}
   - component: {fileID: -3037701665394380923}
   m_Layer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8207485284939972925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.94000006, z: 1.6199999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a37d1e8787dc964fac646d92f37e001, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,6 +82,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &2467068766214005416
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207485284939972925}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!135 &5504076934371090374
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -106,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422cb38fb2af91f4eb13b1b2b3840156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   speed: 8
   lifeDuration: 2
+  playerNum: 0
