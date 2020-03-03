@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             {
                 currentTime += Time.deltaTime;
                 float value = currentTime / winCamDuration;
+                winCam.depth = 100;
                 winCam.rect = new Rect(Mathf.Lerp(startRect.x, 0, value), Mathf.Lerp(startRect.y, 0, value), Mathf.Lerp(startRect.width, 1, value), Mathf.Lerp(startRect.height, 1, value));
             }
             else if (!winSprite.activeInHierarchy)
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
                     // Set player number
                     currPlayer.GetComponentInChildren<PlayerController>().PlayerNumber = i + 1;
                     currPlayer.GetComponentInChildren<CameraController>().PlayerNumber = i + 1;
+                    currPlayer.GetComponentInChildren<GunJoystick>().PlayerNumber = i + 1;
 
                     // Calculate random spawn position
                     float xPos = Random.Range(spawnArea.min.x, spawnArea.max.x);

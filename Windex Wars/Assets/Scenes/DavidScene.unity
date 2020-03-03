@@ -6595,8 +6595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 1750, y: 1250}
+  m_AnchoredPosition: {x: 0, y: -53}
+  m_SizeDelta: {x: 1700, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696302418
 MonoBehaviour:
@@ -7284,7 +7284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fb49347039b5741998813f070753da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: a869388934242cd48b7e34cad09d1c10, type: 3}
+  cursorTexture: {fileID: 2800000, guid: b7166f08618485f4dbb63431464d2fbd, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
   cursorDelay: 33
@@ -7326,11 +7326,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 4
-    height: 4
-  spawnHeight: 1
+    x: 62
+    y: -53
+    width: 32
+    height: -21
+  spawnHeight: 6
   winCamDuration: 1
   winSprite: {fileID: 1696302416}
   deactivateUI:
