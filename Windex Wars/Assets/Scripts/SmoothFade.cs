@@ -14,12 +14,14 @@ public class SmoothFade : MonoBehaviour
     private float delayTime;
     private SpriteRenderer sr;
     private Image image;
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         image = GetComponent<Image>();
+        text = GetComponent<Text>();
 
         // Set the initial times
         currentTime = 0;
@@ -68,6 +70,24 @@ public class SmoothFade : MonoBehaviour
                 currentTime += Time.deltaTime;
                 float value = currentTime / Duration;
                 image.color = new Color(image.color.r, image.color.g, image.color.b, Mathf.Lerp(1, 0, value));
+            }
+        }
+        // UI Text
+        else if (text != null)
+        {
+            // Lerp the fade in
+            if (FadeIn && text.color.a != 1)
+            {
+                currentTime += Time.deltaTime;
+                float value = currentTime / Duration;
+                text.color = new Color(text.color.r, text.color.g, text.color.b, Mathf.Lerp(0, 1, value));
+            }
+            // Lerp the fade out
+            else if (!FadeIn && text.color.a != 0)
+            {
+                currentTime += Time.deltaTime;
+                float value = currentTime / Duration;
+                text.color = new Color(text.color.r, text.color.g, text.color.b, Mathf.Lerp(1, 0, value));
             }
         }
     }
