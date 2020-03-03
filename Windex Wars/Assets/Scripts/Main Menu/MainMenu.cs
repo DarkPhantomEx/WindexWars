@@ -79,7 +79,13 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        GameManager gm = GetComponent<GameManager>();
+        gm.players = players;
+        gm.playersAlive = players;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        gm.BeginGame();
     }
 
     public void Quit()
