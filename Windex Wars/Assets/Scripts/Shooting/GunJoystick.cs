@@ -13,6 +13,7 @@ public class GunJoystick : MonoBehaviour
     public GameObject bulletPerfab;
 
     public int PlayerNumber;
+    private bool reload=false;
 
 
 
@@ -20,12 +21,18 @@ public class GunJoystick : MonoBehaviour
     void Update()
     {
         bool b = Input.GetButton("JoystickBPlayer" + PlayerNumber);
-        if (b)
+        bool u = Input.GetButtonUp("JoystickBPlayer" + PlayerNumber);
+        if (b & !reload)
         {
             //Shoot();
             GameObject bulletObject = Instantiate(bulletPerfab);
             bulletObject.transform.position = this.transform.position+ transform.forward;
             bulletObject.transform.forward = this.transform.forward;
+            reload = true;
+        }
+        if (u)
+        {
+            reload = false;
         }
     }
 
