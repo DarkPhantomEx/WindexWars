@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
+    public float damage = 10f;
     public float speed = 8f;
     public float lifeDuration = 2f;
     private float lifeTimer;
@@ -23,6 +24,16 @@ public class Bullets : MonoBehaviour
         if (lifeTimer<=0f)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("hitted");
+        Target target = other.transform.GetComponent<Target>();
+        if (target != null)
+        {
+            target.TakeDamage(damage);
         }
     }
 }
